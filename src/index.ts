@@ -1,9 +1,13 @@
 import express from 'express';
-import expresslib from './libraries/express-lib';
+import config from './config';
+import expressLoader from './libs/express.lib'
+import mongooseLoader from './libs/mongoose.lib'
+
 const app = express();
 
-expresslib(app);
+app.listen(config.PORT, () => {
+    expressLoader(app);
+    mongooseLoader();
 
-app.listen(3000, ()=>{
-    console.log("running in 3000 localhost")
+    console.log(`server running at localhots: ${config.PORT}`);
 })
