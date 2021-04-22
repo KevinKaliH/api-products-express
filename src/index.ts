@@ -5,9 +5,9 @@ import mongooseLoader from './libs/mongoose.lib'
 
 const app = express();
 
-app.listen(config.PORT, () => {
-    expressLoader(app);
-    mongooseLoader();
+expressLoader(app);
+mongooseLoader();
 
+app.listen(config.PORT, () => {
     console.log(`server running at localhots: ${config.PORT}`);
 })
