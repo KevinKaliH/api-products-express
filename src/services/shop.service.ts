@@ -8,8 +8,8 @@ import { VirtualType } from "mongoose";
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'hernandezgomezk122@gmail.com',
-        pass: 'DDLJlove201299'
+        user: 'correodequienloenvia@gmail.com',
+        pass: 'contraseñadelcorreoquetienecomousuario'
     }
 });
 
@@ -34,7 +34,7 @@ class ProductService {
         let message = await this.SetMessage(products);
 
         var mailOptions = {
-            from: 'hernandezgomezk@yahoo.es',
+            from: 'ingresarcorreo@yahoo.es',
             to: user.username,
             subject: 'compra',
             html: message
