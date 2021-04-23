@@ -102,3 +102,8 @@ url                                 method
 8. localhost:4000/api/products/getMyProducts   :post //optener los productos que a insertado el usuario que inicio sesion  :privado
 
 9. localhost:4000/api/shop/newShop   :post   //recibo de proforma de la compra realizada :privado    
+
+*Nota importante*
+Para la tarea a realizar no se logro realizar una interfaz de usuario. 
+Para probar dicha actividad debe usar Postman, con este programa se realizan las peticiones al server socket tal como si
+lo hiciera desde una aplicacion cliente. pero por motivos de tiempo y trabajo no se logro realizar.
