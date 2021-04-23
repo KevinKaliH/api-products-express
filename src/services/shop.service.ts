@@ -43,7 +43,7 @@ class ProductService {
 
         let info = await transporter.sendMail(mailOptions);
         if (info) {
-            console.log(info);
+            return;
         } else {
             throw new CustomError({ message: "sorry can't send message", status: 500 })
         }
