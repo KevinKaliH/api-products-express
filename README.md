@@ -10,7 +10,32 @@ se definieron algunos parametros se seguridad como autenticacion y autorizacion.
 Base de Datos: Mongo DB
 Lenguaje de programacion: Javascript
 
-Se desarrollo con:
+##Las entidades de Base de Datos son:
+
+Roles = {
+  _id: string,
+  name: string
+}
+
+Users = {
+  _id: string,
+  name: string,
+  username: string,
+  password: string,
+  _role: string
+}
+
+Product = {
+  _id: string,
+  title: string,
+  description: string,
+  stock: number,
+  price: number,
+  img: string,
+  _created_by: string
+}
+
+##Se desarrollo con:
 
 2. Node
 3. Express js
@@ -19,7 +44,7 @@ Se desarrollo con:
 6. Nodemailer
 7. jwt
 
-Se Implementaron:
+##Se Implementaron:
 
 1. Servicio de envio de correo  
 2. Servicio Api Rest 
@@ -27,6 +52,33 @@ Se Implementaron:
 4. Auenticacion y Autorizacion (jwt)
 5. Servicio de base de datos Mongo
 6. Cliente Web Fue Realizado con React JS pero no se encuentra completo debido a falta de tiempo.
+
+##Aplica:
+ 1. encryptacion de contraseña
+ 2. autenticacion a traves de tokens
+ 3. permisos de usuarios segun Rol y url de peticion
+
+##Programado con las siguientes estructuras:
+1. Patron repositorio
+2. Patron servicio
+3. Patron inyeccion de dependencias
+4. ORM para manipulacion de base de datos
+5. MVC (rutas, middlewares y controladores)
+
+
+#Detalles de la programacion:
+
+-> Un sistema de rutas se encarga de capturar las peticiones que los clientes realiza.
+-> A traves de middlewares se validan credenciales del usuario y permisos para el recurso que solicita.
+-> Manipular la peticion respondiendo con multiples codigos de respuesta, tales como:
+  NOT FOUND: 404,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  SUCCESS: 200,
+  BAD REQUEST: 400,
+  ERROR SERVER: 500
+-> el manejar solicita a un servicio algunas acciones segun la peticion que realiza el usuario.
+-> el repositorio se encarga de buscar, insertar, editar e incluso borrar segun parametros de la solicitud
 
 Detalles de Api Rest:
 Nota: Hay recursos privados y publicos
