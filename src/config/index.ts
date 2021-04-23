@@ -14,5 +14,7 @@ export default {
     SALT_BCRYPT: parseInt(saltBcrypt, 10),
     DB_MONGO: process.env.DB_MONGO ?? "",
     TOKEN_SECRET: process.env.JWT_SECRET ?? "",
-    TOKEN_EXPIRE: parseInt(process.env.TOKEN_EXPIRE as string, 10)
+    TOKEN_EXPIRE: parseInt(process.env.TOKEN_EXPIRE as string, 10),
+    CORREO_NODEMAILER: process.env.CORREO_NODEMAILER,
+    PASSWORD_NODEMAILER: process.env.PASSWORD_NODEMAILER
 }

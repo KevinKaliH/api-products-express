@@ -4,12 +4,13 @@ import nodemailer from 'nodemailer';
 import userRepository from "../repositories/user.repository";
 import CustomError from "../data-transfer/CustomError";
 import { VirtualType } from "mongoose";
+import config from '../config'
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'correodequienloenvia@gmail.com',
-        pass: 'contraseñadelcorreoquetienecomousuario'
+        user: config.CORREO_NODEMAILER,
+        pass: config.PASSWORD_NODEMAILER
     }
 });
 

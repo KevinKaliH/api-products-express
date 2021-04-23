@@ -10,9 +10,6 @@ export const Create = async (req: Request, res: Response) => {
     try{
         let result = await shopService.Create(listPdto);
 
-
-        
-
         shopService.SendEmail(userToken, listPdto);
         
         res.json(new RespDTO(true, "Sold succesfully", 200, result));
