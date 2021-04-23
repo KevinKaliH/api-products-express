@@ -4,7 +4,7 @@ import { checkRole, isAuthenticate } from '../middleware/auth.middleware';
 
 const router = Router();
 
-router.get("/", GetAll);
+router.get("/all", GetAll);
 
 router.post("/create", [isAuthenticate, checkRole(["admin", "writer"])], Create);
 
