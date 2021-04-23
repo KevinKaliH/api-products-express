@@ -86,16 +86,15 @@ Nota: Hay recursos privados y publicos
   --- Endpoints:
 
 url                                 method
-localhost:4000/api/auth/signup      :post   //agregar un usuario          :privado
-localhost:4000/api/auth/signin      :post   //iniciar sesion              :publico
+1. localhost:4000/api/auth/signup      :post   //agregar un usuario          :privado
+2. localhost:4000/api/auth/signin      :post   //iniciar sesion              :publico
 
-localhost:4000/api/role/create      :post   //crear un nuevo rol          :privado
-localhost:4000/api/role/all         :get    //obtener todos los roles de usuario  :privado
+3. localhost:4000/api/role/create      :post   //crear un nuevo rol          :privado
+4. localhost:4000/api/role/all         :get    //obtener todos los roles de usuario  :privado
 
-localhost:4000/api/products/all     :get    //obtener los productos     :public
-localhost:4000/api/products/create  :post   //crear un producto         :privado
-localhost:4000/api/products/:id     :post   //actualizar un producto    :privado
-localhost:4000/api/products/getMyProducts   :post //optener los productos que a insertado el usuario que inicio sesion  :privado
+5. localhost:4000/api/products/all     :get    //obtener los productos     :public
+6. localhost:4000/api/products/create  :post   //crear un producto         :privado
+7. localhost:4000/api/products/:id     :post   //actualizar un producto    :privado
+8. localhost:4000/api/products/getMyProducts   :post //optener los productos que a insertado el usuario que inicio sesion  :privado
 
-
-localhost:4000/api/shop/newShop   :post   //recibo de proforma de la compra realizada :privado    
+9. localhost:4000/api/shop/newShop   :post   //recibo de proforma de la compra realizada :privado    
