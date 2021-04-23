@@ -68,17 +68,17 @@ Product = {
 
 #Detalles de la programacion:
 
--> Un sistema de rutas se encarga de capturar las peticiones que los clientes realiza.
--> A traves de middlewares se validan credenciales del usuario y permisos para el recurso que solicita.
--> Manipular la peticion respondiendo con multiples codigos de respuesta, tales como:
+a. Un sistema de rutas se encarga de capturar las peticiones que los clientes realiza.
+b. A traves de middlewares se validan credenciales del usuario y permisos para el recurso que solicita.
+c. Manipular la peticion respondiendo con multiples codigos de respuesta, tales como:
   NOT FOUND: 404,
   UNAUTHORIZED: 401,
   FORBIDDEN: 403,
   SUCCESS: 200,
   BAD REQUEST: 400,
   ERROR SERVER: 500
--> el manejar solicita a un servicio algunas acciones segun la peticion que realiza el usuario.
--> el repositorio se encarga de buscar, insertar, editar e incluso borrar segun parametros de la solicitud
+d. el manejar solicita a un servicio algunas acciones segun la peticion que realiza el usuario.
+e. el repositorio se encarga de buscar, insertar, editar e incluso borrar segun parametros de la solicitud
 
 Detalles de Api Rest:
 Nota: Hay recursos privados y publicos
