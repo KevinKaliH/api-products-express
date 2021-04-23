@@ -10,6 +10,6 @@ router.post("/create", [isAuthenticate, checkRole(["admin", "writer"])], Create)
 
 router.get("/getMyProducts", [isAuthenticate, checkRole(["admin", "writer"])], GetAllByCreator);
 
-router.put("/:id", [isAuthenticate, checkRole(["admin","writer","anonymous"])], UpdateStock);
+router.put("/:id", [isAuthenticate, checkRole(["admin","writer"])], UpdateStock);
 
 export default router;
