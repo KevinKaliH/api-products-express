@@ -35,6 +35,11 @@ export interface IProductDTO {
     _created_by: string,
 }
 
+export interface IProductShopDTO {
+    _id: string,
+    quantity: number
+}
+
 export interface IProductDetail {
     _id: string
     title: string,

@@ -50,11 +50,27 @@ class ProductRepository {
                 throw new CustomError({message: "Product not found", status: 404})
             }
     
-            temp.stock = stock;
+            temp.stock -= stock;
             await temp.save();
             return true;
         }catch(err){
             console.log("error while update product");
+            
+            throw new CustomError({message: err.message, status: 500});
+        }
+    }
+
+    async GetById(id: string){
+        try{
+            let temp = await db.findById(id);
+            
+            if(!temp){
+                throw new CustomError({message: "Product not found", status: 404})
+            }
+    
+            return temp;
+        }catch(err){
+            console.log("error while get product by id");
             
             throw new CustomError({message: err.message, status: 500});
         }
